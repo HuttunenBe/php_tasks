@@ -10,7 +10,7 @@
 
 <body>
 
-    <h1>Basic PHP Calculator</h1>
+    <h1>Calculator</h1>
 
 
     <form method="POST" action="">
@@ -32,12 +32,12 @@
 
 
 <?php
-$resultMesage = "";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $number1 = $_POST['number1'];
     $number2 = $_POST['number2'];
     $operator = $_POST['operator'];
+
 
     echo '<div class="result">';
     if ($operator == "*") {

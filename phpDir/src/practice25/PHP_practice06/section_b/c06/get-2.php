@@ -3,6 +3,9 @@
 /* Write your code here 
 Overall idea here is to use query string to select content
 
+
+$city
+
 Step 1: Store the value of city in some variable, 
 what happens let us say if a key called "city" and its value is not null
 Hint: try using nullishing coalescing operator: ??
@@ -20,9 +23,29 @@ Step 4:  If the value in the city is a blank string it should display
 
 */
 
+
+
+$cities = [
+    'Helsinki' => '48 Store Street, WC1E 7BS',
+    'Oslo' => '151 Oxford Street, 2021',
+    'Madrid' => '1242 7th Street, 10492'
+];
+
+$city = $_GET['city'] ?? '';
+$valid = array_key_exists($city, $cities);
+
+if ($valid) {
+    $address = $cities[$city];
+} else {
+    $address = 'Please select a city.';
+}
 ?>
+ <?php
 
+foreach ($cities as $key => $value) { ?>
+    <a href="get-2.php?city=<?= $key ?>"> <?= $key ?></a>
+  <?php }
 
-//Write your code here
+echo $address;
 
-<?php include 'includes/footer.php' ?>
+//arraykey 

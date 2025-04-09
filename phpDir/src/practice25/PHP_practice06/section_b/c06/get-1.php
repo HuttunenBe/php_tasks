@@ -3,6 +3,7 @@
 Hit the URL
 http://localhost:8005/PHP_practice06/section_b/c06/get-1.php?city=Helsinki
 
+
 TRY: In the browser's address bar, remove the query string from URL
 and reload the page. It will display two errors.
 
@@ -34,8 +35,11 @@ $cities = [
   'London' => '1242 7th Street, 10492'
 ];
 
+
+
 $city = $_GET['city'];
 $address = $cities[$city];
+
 
 ?>
 <?php include 'includes/header.php' ?>

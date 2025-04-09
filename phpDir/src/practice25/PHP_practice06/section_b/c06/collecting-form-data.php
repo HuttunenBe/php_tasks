@@ -27,6 +27,9 @@
   <p><input type="submit" value="Save"></p>
 </form>
 
-<pre><?php var_dump($_POST); ?></pre>
+
+<?php var_dump($_POST);?>
+
+//action method 
 
 <?php include 'includes/footer.php'; ?>
