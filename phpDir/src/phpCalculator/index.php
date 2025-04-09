@@ -54,10 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $result = $number1 / $number2;
             echo "The result is $number1 / $number2 = $result";
         } else {
-            echo "Cannot divide by zero!";
+            echo "Number cannot be divided by zero!";
         }
-    } else {
-        echo "Please use a valid operator!";
     }
     echo '</div>';
 }
