@@ -29,7 +29,7 @@
 </body>
 
 </html>
-
+<div class="result">
 
 <?php
 
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $operator = $_POST['operator'];
    
 
-    echo '<div class="result">';
+
     if ($operator == "*") {
         $result = $number1 * $number2;
         echo "The result is $number1 * $number2 = $result";
@@ -54,9 +54,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $result = $number1 / $number2;
             echo "The result is $number1 / $number2 = $result";
         } else {
-            echo "Number cannot be divided by zero!";
+            echo "You cannot divide number by zero!";
         }
     }
-    echo '</div>';
+   
 }
 ?>
+ </div>

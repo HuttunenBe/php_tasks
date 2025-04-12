@@ -1,6 +1,21 @@
 <?php include 'includes/header.php'; ?>
 
+
+
+<form method="GET" action="">
+        <input type="text" name="input" required placeholder="Enter something">
+        <input type="submit" value="Submit">
+    </form>
+
 <?php
+
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+  $input = $_GET["text"] ? ;
+  echo "You searched for: $text";
+} else {
+  echo "";
+} 
+
 /* Write your PHP code here
 Overall idea here is to instead of POST in prev. practice 
 how would you do this with HTTP GET

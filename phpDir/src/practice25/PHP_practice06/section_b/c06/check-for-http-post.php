@@ -1,6 +1,26 @@
 <?php include 'includes/header.php'; ?>
 
+
+
+<form method="POST" action="">
+        <input type="text" name="text" required placeholder="Enter something">
+        <input type="submit" value="Submit">
+    </form>
+
 <?php
+
+
+
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $text = $_POST ["text"];
+  echo "You searched for $text";
+} else {
+ echo "";
+
+}; 
+
+
 /* Write PHP Code here  
 Overall idea here is to check if a form has been submitted
 

@@ -7,7 +7,7 @@
 //After fixing this form, simply run it few times to check how this works
 ?>
 
-<form>
+<form method=POST action="">
   <p>Name: <input type="text" name="name"></p>
   <p>Age: <input type="text" name="age"></p>
   <p>Email: <input type="text" name="email"></p>
@@ -28,8 +28,8 @@
 </form>
 
 
-<?php var_dump($_POST);?>
-
-//action method 
+<?php 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+var_dump($_POST);}?>
 
 <?php include 'includes/footer.php'; ?>

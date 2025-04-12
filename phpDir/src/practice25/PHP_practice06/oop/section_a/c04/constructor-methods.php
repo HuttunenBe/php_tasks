@@ -1,4 +1,15 @@
 <?php
+
+declare(strict_types=1);
+
+class Account {
+  public $number;
+  public $type;
+  public $balance; 
+}
+
+
+
 /* Write your PHP code here
 
 Step 1: Use and declare php strict types
