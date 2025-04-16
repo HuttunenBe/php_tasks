@@ -9,10 +9,7 @@
 </head>
 
 <body>
-
     <h1>Calculator</h1>
-
-
     <form method="POST" action="">
         <input type="number" name="number1" required placeholder="Enter a number">
         <select name="operator" required>
@@ -31,33 +28,30 @@
 </html>
 <div class="result">
 
-<?php
+    <?php
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $number1 = $_POST['number1'];
-    $number2 = $_POST['number2'];
-    $operator = $_POST['operator'];
-   
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $number1 = $_POST['number1'];
+        $number2 = $_POST['number2'];
+        $operator = $_POST['operator'];
 
-
-    if ($operator == "*") {
-        $result = $number1 * $number2;
-        echo "The result is $number1 * $number2 = $result";
-    } elseif ($operator == "+") {
-        $result = $number1 + $number2;
-        echo "The result is $number1 + $number2 = $result";
-    } elseif ($operator == "-") {
-        $result = $number1 - $number2;
-        echo "The result is $number1 - $number2 = $result";
-    } elseif ($operator == "/") {
-        if ($number2 != 0) {
-            $result = $number1 / $number2;
-            echo "The result is $number1 / $number2 = $result";
-        } else {
-            echo "You cannot divide number by zero!";
+        if ($operator == "*") {
+            $result = $number1 * $number2;
+            echo "The result is $number1 * $number2 = $result";
+        } elseif ($operator == "+") {
+            $result = $number1 + $number2;
+            echo "The result is $number1 + $number2 = $result";
+        } elseif ($operator == "-") {
+            $result = $number1 - $number2;
+            echo "The result is $number1 - $number2 = $result";
+        } elseif ($operator == "/") {
+            if ($number2 != 0) {
+                $result = $number1 / $number2;
+                echo "The result is $number1 / $number2 = $result";
+            } else {
+                echo "You cannot divide number by zero!";
+            }
         }
     }
-   
-}
-?>
- </div>
+    ?>
+</div>
