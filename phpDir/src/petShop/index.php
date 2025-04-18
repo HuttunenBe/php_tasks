@@ -68,21 +68,21 @@ session_start();
             }
         }
 
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') { //checks if form was submitted using POST
-            $petName = $_POST['petName']; //gets submitted values 
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') { 
+            $petName = $_POST['petName']; 
             $petAge = $_POST['petAge'];
             $petType = $_POST['petType'];
 
-            $pet = new Pet($petName, $petAge, $petType); //make new pet object
-            $_SESSION['pet'][] = $pet; //adds new pet to array 
+            $pet = new Pet($petName, $petAge, $petType); 
+            $_SESSION['pet'][] = $pet; 
 
-            greet($petName, $petAge, $petType); //function call
-            petAction($petType); //funcation call 
+            greet($petName, $petAge, $petType); 
+            petAction($petType); 
         }
 
-        if (isset($_SESSION['pet'])) { //checks for pets, if pets ->
+        if (isset($_SESSION['pet'])) { 
             echo "<div id='container'>";
-            foreach ($_SESSION['pet'] as $pet) { //run trough the array and echo stored pets
+            foreach ($_SESSION['pet'] as $pet) { 
                 echo "<p>Pet </br> Name: {$pet->petName} </br> Age: {$pet->petAge} </br> Type: {$pet->petType}</p>";
                 echo petAction($pet->petType);
             }
@@ -94,3 +94,19 @@ session_start();
 </body>
 
 </html>
+
+
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') { <!-- checks if form was submitted using POST -->
+            $petName = $_POST['petName']; <!--gets submitted values -->
+
+            $pet = new Pet($petName, $petAge, $petType); <!-- make new pet object -->
+            $_SESSION['pet'][] = $pet; <!--- adds new pet to array --->
+
+            greet($petName, $petAge, $petType); 
+            petAction($petType); <!--- funcation calls ---->
+        }
+
+        if (isset($_SESSION['pet'])) { <!--- checks for pets, if pets -> --->
+            echo "<div id='container'>";
+            foreach ($_SESSION['pet'] as $pet) { <!--- run trough the array and echo stored pets -->
