@@ -30,6 +30,25 @@
 	
 	?>
 
+<?php
+
+$connection = mysqli_connect('db', 'root', 'lionPass', 'mylist');
+
+if (!$connection) {
+    die('Database connection failed: ' . mysqli_connect_error());
+}
+
+$query = "SELECT * FROM reports";
+$result = mysqli_query($connection, $query);
+
+while ($record = mysqli_fetch_assoc($result)) {
+    print_r($record);
+   
+}
+?>
+
+
+
 
 
 

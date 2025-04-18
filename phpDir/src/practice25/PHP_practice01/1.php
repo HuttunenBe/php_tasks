@@ -18,21 +18,6 @@
     </h1>
 
   </article>
-  <?php
-
-
-$servername = "mylist";
-$username = "root";
-$password = "lionPass";
-
-$connection = mysqli_connect('dp', 'root', 'lionPass', 'mylist');
-if(!$connection) {
- die('Database connection failed') . mysqli_error($connection);
-} 
-
-
-?>
-
-
+  <!--MAIN CONTENT-->
 
   <?php include "includes/footer.php"; ?>

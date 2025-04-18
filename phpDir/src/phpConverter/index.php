@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Converter</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <div class="resultCircle">
         <h1>Converter</h1>
         <?php
-
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['convertTemperature']) && $_POST['temperature'] !== '') {
             $tempCelsius = $_POST['temperature'];
@@ -75,3 +72,13 @@
 </body>
 
 </html>
+
+<!--if ($_SERVER['REQUEST_METHOD'] === 'POST' (CHECK IF FORM WAS SUBMITTED) && isset($_POST['convertTemperature']) (CHECKS IF BUTTON WAS PUSHED) && $_POST['temperature'] !== '') (CHECKS THAT INPUT IS NOT EMPTY){
+        $tempCelsius = $_POST['temperature']; (THIS STORES THE INPUT!)
+            $fahrenheit = $tempCelsius * 9 / 5 + 32; (VARIABLE STORES THE RESULT)
+            $kelvin = $tempCelsius + 273.15; 
+            
+            DIV OUTSIDE PHP= <div class="result"></div>
+            DIV INSIDE PHP = '<div class="result">''</div>'
+            CAN ALSO WRAP EACH ECHO RESULT IN <P>
+            -->
